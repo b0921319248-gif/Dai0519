@@ -44,6 +44,9 @@ with col_right:
     with st.expander("查看進階提醒參數設定"):
         st.write("這裡是發信伺服器的底層設定...")
 
+
+view = st.segmented_control("檢視模式",["月視角", "週視角"],default="月視角")
+
 @st.dialog("系統公告")
 def show_alert():
     st.write("本週作業請確認 requirements.txt 有正確設定！")
