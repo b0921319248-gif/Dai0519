@@ -6,6 +6,9 @@ with st.sidebar:
     st.write("###  行事曆群組")
     st.radio("選擇群組", ["工作", "家庭", "朋友"])
 
+
+title = st.text_input("行程主旨",placeholder="請填寫會議名稱...")
+
 col_left, col_center, col_right = st.columns([1, 2, 1.2], gap="large")
 
 with col_left: 
