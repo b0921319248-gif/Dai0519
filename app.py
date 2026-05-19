@@ -6,9 +6,7 @@ with st.sidebar:
 
 col_left, col_center, col_right = st.columns([1, 2, 1.2], gap="large")
 
-st.write("上面是大標題")
-st.divider()
-st.write("下面是內容區塊")
+
 
 with col_left: 
     st.write("###  新增區") 
@@ -44,3 +42,6 @@ def show_alert():
 if st.button("查看公告"): show_alert()
 
 
+st.write("上面是大標題")
+st.divider()
+st.write("下面是內容區塊")
