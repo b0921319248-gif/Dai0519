@@ -9,7 +9,7 @@ with st.sidebar:
 
 title = st.text_input("行程主旨",placeholder="請填寫會議名稱...")
 
-col_left, col_center, col_right = st.columns([1, 3], gap="large")
+col_left, col_center, col_right = st.columns([1, 3, 1.2], gap="large")
 
 with col_left: 
     st.write("###  新增區") 
