@@ -6,8 +6,6 @@ with st.sidebar:
 
 col_left, col_center, col_right = st.columns([1, 2, 1.2], gap="large")
 
-
-
 with col_left: 
     st.write("###  新增區") 
     st.button("按鈕放左邊")
@@ -45,3 +43,8 @@ if st.button("查看公告"): show_alert()
 st.write("上面是大標題")
 st.divider()
 st.write("下面是內容區塊")
+
+
+st.button("按鈕 A")
+st.write("")  # 塞入一行空白間距
+st.button("按鈕 B")
