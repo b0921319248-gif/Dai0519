@@ -55,3 +55,5 @@ st.write("下面是內容區塊")
 st.button("按鈕 A")
 st.write("")  # 塞入一行空白間距
 st.button("按鈕 B")
+
+my_color = st.color_picker("挑選辨識顏色","#1A73E8")
