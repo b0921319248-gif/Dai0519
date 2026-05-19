@@ -24,7 +24,9 @@ with col_center:
         st.header("圖表") 
         st.line_chart([1, 5, 2, 6, 2, 1])
     with tab3: 
-        st.header("設定") name = st.text_input("你的名字") st.write(f"Hello {name}")
+        st.header("設定") name = 
+        st.text_input("你的名字") 
+        st.write(f"Hello {name}")
 
 with col_right: 
     st.write("###  設定區") 
