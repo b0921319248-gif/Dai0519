@@ -13,9 +13,10 @@ col_left, col_center, col_right = st.columns([1, 3, 1.2], gap="large")
 
 with col_left: 
     st.write("###  新增區") 
+    st.button("按鈕放左邊")
     today = st.date_input("選擇日期",datetime.date.today())
     meeting_time = st.time_input("選擇時間")
-    st.button("按鈕放左邊")
+    
    
     with st.container(border=True): 
         st.write(" 標題：開學典禮") 
