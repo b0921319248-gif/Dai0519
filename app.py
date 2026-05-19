@@ -57,6 +57,8 @@ st.write("上面是大標題")
 st.divider()
 st.write("下面是內容區塊")
 
+note = st.text_area("行程備忘錄 / 詳細說明")
+
 
 st.button("按鈕 A")
 st.write("")  # 塞入一行空白間距
