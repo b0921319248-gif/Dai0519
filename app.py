@@ -12,6 +12,8 @@ with col_left:
     with st.container(border=True): 
         st.write(" 標題：開學典禮") 
         st.write(" 時間：09:00")
+    with st.popover("快速進階篩選"):
+        st.checkbox("隱藏已過期行程")
 
 with col_center: 
     st.write("###  看板區") 
