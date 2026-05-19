@@ -18,5 +18,6 @@ with l:
 with r:
     for i in st.session_state.mylist:
          with st.container(border=True):
+             col1, col2 = st.columns(2)
              st.write(i)
        
