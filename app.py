@@ -49,6 +49,7 @@ with col_right:
     with st.expander("查看進階提醒參數設定"):
         st.write("這裡是發信伺服器的底層設定...")
         is_open = st.toggle("開啟 24H 郵件自動發信通知",value=True)
+        mins = st.number_input("行程開始前幾分鐘提醒？",min_value=0, max_value=60,value=15)
 
 
 view = st.segmented_control("檢視模式",["月視角", "週視角"],default="月視角")
