@@ -57,6 +57,7 @@ with col_right:
 
 
 @st.dialog("系統公告")
+my_color = st.color_picker("挑選辨識顏色","#1A73E8")
 def show_alert():
     st.write("本週作業請確認 requirements.txt 有正確設定！")
 if st.button("查看公告"): show_alert()
@@ -72,8 +73,4 @@ note = st.text_area("行程備忘錄 / 詳細說明")
 st.button("按鈕 A")
 st.write("")  # 塞入一行空白間距
 st.button("按鈕 B")
-
-
-
-my_color = st.color_picker("挑選辨識顏色","#1A73E8")
 
