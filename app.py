@@ -8,6 +8,15 @@ if "mylist" not in st.session_state:
     st.session_state.mylist = []
 l , r = st.columns(2)
 
+def get_color(group):
+    if group == "學生":
+        return "#E3F2FD"
+    elif group == "老師":
+        return "#E6F5D9"
+    elif group == "家長會":
+        return "#FFF3E0"
+    else:
+        return "#F3E5F5"
 with l:
     t1=st.text_input("行程主旨")
     t3=st.date_input("日期選擇" , datetime.date.today())
@@ -18,7 +27,30 @@ with l:
      value=15
     )
     if st.button("新增行程"):
-        st.session_state.mylist.append(f"行程主旨:{t1},日期選擇:{t3},時間選擇:{t4},幾分鐘前提醒:{n1}")
+        st.session_state.mylist.append({
+            "group": mode,
+            "title": t1,
+            "date": str(t3),
+            "time": str(t4),
+            "remind": n1
+        })
 with r:
-    for i in st.session_state.mylist:
-        st.write(i)
+
+    with st.container(border = True):
+        for item in st.session_state.mylist:
+            color = get_color(item["group"])
+       
+            st.markdown(f"""
+            <div style="
+                background-color:{color};
+                padding:15px;
+                border-radius:12px;
+                margin-bottom:10px;
+            ">
+                <b>{item["group"]}</b><br>
+                📌 {item["title"]}<br>
+                📅 {item["date"]}<br>
+                ⏰ {item["time"]}<br>
+                🔔 提前 {item["remind"]} 分鐘
+            </div>
+            """, unsafe_allow_html=True)
