@@ -18,4 +18,5 @@ with l:
 with r:
     for i in st.session_state.mylist:
         st.write(i)
+        with st.container(border=True):
 
