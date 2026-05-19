@@ -9,7 +9,7 @@ with st.sidebar:
 
 title = st.text_input("行程主旨",placeholder="請填寫會議名稱...")
 
-col_left, col_center, col_right = st.columns([1, 2, 1.2], gap="large")
+col_left, col_center, col_right = st.columns([1, 3], gap="large")
 
 with col_left: 
     st.write("###  新增區") 
@@ -61,12 +61,3 @@ st.button("按鈕 B")
 
 my_color = st.color_picker("挑選辨識顏色","#1A73E8")
 
-
-
-使用 st.columns(2) 做出對稱的輸入區：
-
-左側：行程主旨（text_input）+ 色彩標籤（color_picker）
-
-右側：日期（date_input）+ 時間（time_input）
-
-頂部：橫向膠囊鈕（segmented_control）切換顯示狀態
