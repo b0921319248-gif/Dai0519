@@ -62,5 +62,8 @@ st.button("按鈕 A")
 st.write("")  # 塞入一行空白間距
 st.button("按鈕 B")
 
+
+tag = st.pills("行程屬性",["#工作", "#家庭", "#緊急"])
+
 my_color = st.color_picker("挑選辨識顏色","#1A73E8")
 
