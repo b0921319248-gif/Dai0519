@@ -8,6 +8,7 @@ with st.sidebar:
 
 
 title = st.text_input("行程主旨",placeholder="請填寫會議名稱...")
+tag = st.pills("行程屬性",["#工作", "#家庭", "#緊急"])
 
 col_left, col_center, col_right = st.columns([1, 3, 1.2], gap="large")
 
@@ -73,7 +74,6 @@ st.write("")  # 塞入一行空白間距
 st.button("按鈕 B")
 
 
-tag = st.pills("行程屬性",["#工作", "#家庭", "#緊急"])
 
 my_color = st.color_picker("挑選辨識顏色","#1A73E8")
 
