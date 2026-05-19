@@ -1,4 +1,6 @@
 import streamlit as st
+import datetime
+
 st.set_page_config(page_title="微型 TimeTree", layout="wide")
 with st.sidebar:
     st.write("###  行事曆群組")
@@ -13,7 +15,9 @@ with col_left:
         st.write(" 標題：開學典禮") 
         st.write(" 時間：09:00")
     with st.popover("快速進階篩選"):
-        st.checkbox("隱藏已過期行程")
+        st.checkbox("隱藏已過期行程") 
+        
+today = st.date_input("選擇日期",datetime.date.today())
 
 with col_center: 
     st.write("###  看板區") 
