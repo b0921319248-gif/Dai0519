@@ -38,6 +38,10 @@ with col_center:
         name = st.text_input("你的名字") 
         st.write(f"Hello {name}")
 
+is_open = st.toggle("開啟 24H 郵件自動發信通知",value=True)
+
+
+
 with col_right: 
     st.write("###  設定區") 
     st.button("控制項放右邊")
