@@ -19,6 +19,9 @@ with col_left:
         st.write(" 時間：09:00")
     with st.popover("快速進階篩選"):
         st.checkbox("隱藏已過期行程") 
+
+
+is_open = st.toggle("開啟 24H 郵件自動發信通知",value=True)
         
 today = st.date_input("選擇日期",datetime.date.today())
 meeting_time = st.time_input("選擇時間")
@@ -38,7 +41,7 @@ with col_center:
         name = st.text_input("你的名字") 
         st.write(f"Hello {name}")
 
-is_open = st.toggle("開啟 24H 郵件自動發信通知",value=True)
+
 
 
 
