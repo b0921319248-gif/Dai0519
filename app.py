@@ -18,6 +18,7 @@ with col_left:
         st.checkbox("隱藏已過期行程") 
         
 today = st.date_input("選擇日期",datetime.date.today())
+meeting_time = st.time_input("選擇時間")
 
 with col_center: 
     st.write("###  看板區") 
